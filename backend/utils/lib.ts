@@ -23,6 +23,8 @@ export const extractRelevantData = async ($: any) => {
         ${extractedText}
     `;
   const result = await model.generateContent(prompt);
+
+  console.log("result", result);
   return result.response.text();
 };
 

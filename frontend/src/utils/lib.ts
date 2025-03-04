@@ -39,8 +39,19 @@ export const getUrlFromChrome = async () => {
 
 export const fetchSummary = async (url: string) => {
   try {
-    const res = await axios.post("https://txlens.onrender.com/api/tx-data", { url });
-    return res.data;
+    const { data: html } = await axios.get(url, {
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      },
+    });
+
+    if (html) {
+      const res = await axios.post("https://txlens.onrender.com/api/tx-data", {
+        html,
+      });
+      return res.data;
+    }
   } catch (error) {
     console.error("Error fetching transaction data:", error);
     return error;

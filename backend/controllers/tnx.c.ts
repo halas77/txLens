@@ -12,14 +12,14 @@ import { formatSummary } from "../utils/lib";
 
 export const getTnxData = async (req: Request, res: Response) => {
   try {
-    const { html } = req.body;
-    if (!html) {
-      res.status(400).json({ error: "HTML is required", data: null });
+    const { url } = req.body;
+    if (!url) {
+      res.status(400).json({ error: "URL is required", data: null });
       return;
     }
 
-    const extracttedData = await extractTextFromHTML(html);
-    const aiSummary = await geminiSummary(extracttedData, html);
+    const extracttedData = await extractTextFromHTML(url);
+    const aiSummary = await geminiSummary(extracttedData, url);
     const formattedSummary = formatSummary(aiSummary);
 
     res.json({

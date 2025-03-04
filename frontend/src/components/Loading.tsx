@@ -6,7 +6,7 @@
 const Loading = () => {
   return (
     <div className="flex-grow flex flex-col items-center justify-center min-h-[400px] gap-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-100/30 via-purple-100/30 to-pink-100/30 dark:from-blue-900/20 dark:via-cyan-900/20 dark:to-blue-900/20 animate-gradient-x"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-100/30 via-purple-100/30 to-pink-100/30 dark:from-blue-950/20 dark:via-cyan-950/20 dark:to-blue-950/20 animate-gradient-x"></div>
 
       <div className="relative z-10 flex flex-col items-center gap-4">
         <div className="h-16 w-16 relative animate-dna-spin">

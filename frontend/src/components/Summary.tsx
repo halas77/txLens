@@ -8,7 +8,7 @@ import DOMPurify from "dompurify";
 const Summary = ({ summary }: { summary: string }) => {
   const sanitizedSummary = DOMPurify.sanitize(summary);
   return (
-    <div className="bg-white dark:bg-gray-800 p-4 rounded-lg prose dark:prose-invert">
+    <div className="bg-white dark:bg-gray-900 p-4 rounded-lg prose dark:prose-invert">
       <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">
         AI Summary
       </h3>

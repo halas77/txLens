@@ -29,7 +29,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-[400px] bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-4 min-h-screen flex flex-col">
+    <div className="w-[400px] bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 p-4 min-h-screen flex flex-col">
       <Header setIsLoading={setIsLoading} />
 
       {isLoading ? (

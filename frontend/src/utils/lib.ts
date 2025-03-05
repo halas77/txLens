@@ -39,7 +39,7 @@ export const getUrlFromChrome = async () => {
 
 export const fetchSummary = async (url: string) => {
   try {
-    const res = await axios.post("https://txlens.onrender.com/api/tx-data", { url });
+    const res = await axios.post("http://localhost:5000/api/tx-data", { url });
     return res.data;
   } catch (error) {
     console.error("Error fetching transaction data:", error);

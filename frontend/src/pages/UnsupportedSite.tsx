@@ -23,6 +23,22 @@ const UnsupportedSite = () => {
               name: "Sepolia Testnet (Sepolia)",
               url: "https://sepolia.etherscan.io/",
             },
+            {
+              name: "Arbitrum (Arbiscan)",
+              url: "https://arbiscan.io",
+            },
+            {
+              name: "Polygon (Polygonscan)",
+              url: "https://polygonscan.com",
+            },
+            {
+              name: "Base (Basescan)",
+              url: "https://basescan.org",
+            },
+            {
+              name: "Lisk (Lisk Explorer)",
+              url: "https://blockscout.lisk.com/",
+            },
           ].map((network) => (
             <div
               key={network.name}
